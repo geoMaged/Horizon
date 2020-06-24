@@ -3,12 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-//const session = require('express-session');
-//const passport = require('passport');
-//const passportLocalMongoose = require('passport-local-mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const indexRoutes = require('../Backend/routes/indexRoutes');
-const loginRoutes = require('../Backend/routes/Login'); 
+const indexRoutes = require('./routes/indexRoutes');
+const loginRoutes = require('./routes/Login'); 
 const findOrCreate = require('mongoose-findorcreate');
 //This line made the Local Strategy method defined. It was undefined before using it.
 //const LocalStrategy = require('passport-local').Strategy;
