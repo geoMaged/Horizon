@@ -4,13 +4,13 @@
   "description": "This is the backend for the Horizon Website.",
   "main": "server.js",
   "scripts": {
-    "client-install": "cd client && npm install",
+    "client-install": "npm install --prefix client",
     "build":"cd client && npm run build",
     "start":"node server.js",
     "server":"nodemon server.js",
     "client":"cd client && npm start",
     "dev":"concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
