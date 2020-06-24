@@ -50,6 +50,7 @@ let userSchema = new mongoose.Schema({
 let User = new mongoose.model('User',userSchema);
 let Article = new mongoose.model('Article',articleSchema);
 
+app.use('/', express.static(path.join(__dirname, '/client/build')));
 
 app.post('/addBookmark',authenticateToken, (req,res)=>{
  
