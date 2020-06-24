@@ -12,13 +12,14 @@ const findOrCreate = require('mongoose-findorcreate');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const app = express();
-ACCESS_TOKEN_SECRET="afd5318ba430fec603b04fb49bba0377c2a8b7d92b0c588c18366d4b2bda8e0397f8749e7a527da3e77239d9584de365b8925a3477ade7ae8a98aea12a7971b9"
-REFRESH_TOKEN_SECRET="968904dfdc06d7a3539e7a61c92e40e36be4b78d0d86261710842fe648b99bc543d8cc6d66e20383b314c252ba82450d0ef2ad3078e97bcefd81071088f3f4fe"
 app.use(cors());
 app.use(indexRoutes);
 app.use(loginRoutes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
+const ACCESS_TOKEN_SECRET="afd5318ba430fec603b04fb49bba0377c2a8b7d92b0c588c18366d4b2bda8e0397f8749e7a527da3e77239d9584de365b8925a3477ade7ae8a98aea12a7971b9"
+const REFRESH_TOKEN_SECRET="968904dfdc06d7a3539e7a61c92e40e36be4b78d0d86261710842fe648b99bc543d8cc6d66e20383b314c252ba82450d0ef2ad3078e97bcefd81071088f3f4fe"
+
 
 mongoose.connect('mongodb+srv://admin-george:lifewithnolimits@cluster0-shird.mongodb.net/horizonDB?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true});
 mongoose.set('useNewUrlParser', true);
@@ -51,7 +52,7 @@ let userSchema = new mongoose.Schema({
 let User = new mongoose.model('User',userSchema);
 let Article = new mongoose.model('Article',articleSchema);
 
-app.use('/', express.static(path.join(__dirname, '/client/build')));
+app.use('/', express.static(path.resolve(__dirname,'client','build')));
 
 app.post('/addBookmark',authenticateToken, (req,res)=>{
  
