@@ -17,7 +17,7 @@ function CreateArticle(){
     function handleClick(){
         
         console.log(state);
-        axios.post('http://localhost:3001/article',article,{
+        axios.post('/article',article,{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }

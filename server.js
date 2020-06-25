@@ -17,6 +17,9 @@ app.use(indexRoutes);
 app.use(loginRoutes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
+
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 const ACCESS_TOKEN_SECRET="afd5318ba430fec603b04fb49bba0377c2a8b7d92b0c588c18366d4b2bda8e0397f8749e7a527da3e77239d9584de365b8925a3477ade7ae8a98aea12a7971b9"
 const REFRESH_TOKEN_SECRET="968904dfdc06d7a3539e7a61c92e40e36be4b78d0d86261710842fe648b99bc543d8cc6d66e20383b314c252ba82450d0ef2ad3078e97bcefd81071088f3f4fe"
 
@@ -339,6 +342,10 @@ if(process.env.NODE_ENV === 'production'){
     res.sendFile(path.resolve(__dirname,'client','build','index.html'));
   });
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 const port = process.env.PORT || 3001;
 

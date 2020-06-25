@@ -10,7 +10,7 @@ function Article(){
         content:''
     });
     const [bookmark,setBookmark] = useState(false);
-    axios.get(`http://localhost:3001/articles/view/${id}`,{
+    axios.get(`/articles/view/${id}`,{
         headers:{
             'authorization':`Bearer ${localStorage.getItem('token')}`
         }
@@ -30,7 +30,7 @@ function Article(){
     function handleClick(e){
         e.preventDefault();
         if(bookmark){
-            axios.post('http://localhost:3001/removeBookmark',{article:id},{
+            axios.post('/removeBookmark',{article:id},{
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('token')}`
                 }
@@ -40,7 +40,7 @@ function Article(){
                 
             })
         }else{
-            axios.post('http://localhost:3001/addBookmark',{article:id},{
+            axios.post('/addBookmark',{article:id},{
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('token')}`
                 }

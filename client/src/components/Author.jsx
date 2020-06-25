@@ -13,7 +13,7 @@ function Author({location}){    //location to get query parameters
     const[author,setAuthor] = useState('');
     const email = data.email;
     useEffect(()=>{
-        axios.get('http://localhost:3001/author?email='+email,{
+        axios.get('/author?email='+email,{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }

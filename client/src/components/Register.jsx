@@ -44,7 +44,7 @@ function Register(props){
     function handleClick(){
 
         console.log(userData);
-        axios.post('http://localhost:3001/register',userData)
+        axios.post('/register',userData)
         .then(response => {
             console.log(response);
             const newUser={

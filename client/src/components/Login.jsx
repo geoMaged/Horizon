@@ -42,7 +42,7 @@ function Login(props){
     // }
 
     function handleClick(event){
-        axios.post('http://localhost:3001/login',userData)
+        axios.post('/login',userData)
         .then(response => {
            // console.log(response.data);
             const newUser={

@@ -7,7 +7,7 @@ function Bookmarks(){
     const [articles,setArticles] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/bookmarks',{
+        axios.get('/bookmarks',{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }

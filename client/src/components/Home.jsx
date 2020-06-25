@@ -10,7 +10,7 @@ function Home(){
     const [articles,setArticles] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/articles',{
+        axios.get('/articles',{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }
