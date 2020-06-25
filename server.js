@@ -52,16 +52,16 @@ let userSchema = new mongoose.Schema({
 let User = new mongoose.model('User',userSchema);
 let Article = new mongoose.model('Article',articleSchema);
 
-app.use('/', express.static(path.resolve(__dirname,'client','build')));
+//app.use('/', express.static(path.resolve(__dirname,'client','build')));
 
 app.post('/addBookmark',authenticateToken, (req,res)=>{
  
-  const user = req.user;
-  const articleId = req.body.article;
-  User.findOneAndUpdate({email:user.email},{$push:{bookmarks:articleId}},(err,doc)=>{
-    if(err){
-      console.log(err);
-    }else{
+    const user = req.user;
+    const articleId = req.body.article;
+    User.findOneAndUpdate({email:user.email},{$push:{bookmarks:articleId}},(err,doc)=>{
+      if(err){
+        console.log(err);
+      }else{
       console.log(doc);
       
     }
@@ -343,5 +343,5 @@ if(process.env.NODE_ENV === 'production'){
 const port = process.env.PORT || 3001;
 
 app.listen(port, (req,res)=> {
-    console.log('Server is running on port 3001.');
+    console.log(`Server is running on port ${port}`);
 })
