@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/geoMaged/Horizon-Website/issues"
   },
-  "homepage": "https://github.com/geoMaged/Horizon-Website#readme",
+  "homepage": "https://horizon-blog2.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
