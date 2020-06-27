@@ -1,20 +1,20 @@
 import React, { useReducer } from 'react';
-import Login from './Login';
-import Article from './Article';
-import Register from './Register';
-import CreateArticle from './CreateArticle';
-import Home from './Home';
-import Nav from './Nav';
-import Footer from './Footer';
+import Login from './components/Login';
+import Article from './components/Article';
+import Register from './components/Register';
+import CreateArticle from './components/CreateArticle';
+import Home from './components/Home';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import { Route, Switch,BrowserRouter as Router } from 'react-router-dom';
-import { UserContext } from './UserContext';
-import { ProtectedRoute } from './ProtectedRoute';
-import {initialState,authReducer} from '../reducers/AuthReducer';
-import NotFound from './NotFound';
-import Bookmarks from './Bookmarks';
-import MyArticles from './MyArticles';
-import Author from './Author';
-import About from './About';
+import { UserContext } from './components/UserContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import {initialState,authReducer} from './reducers/AuthReducer';
+import NotFound from './components/NotFound';
+import Bookmarks from './components/Bookmarks';
+import MyArticles from './components/MyArticles';
+import Author from './components/Author';
+import About from './components/About';
 
 function App() {
 
