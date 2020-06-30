@@ -87,7 +87,7 @@ h1.nav-item{
 form.login{
   text-align: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 20vh;
 }
 
 .container.login{
@@ -136,8 +136,9 @@ input.login:focus,textarea.article:focus{
 
 .login-img{
   position: relative;
-  right: 15px;
+  right: 1vw;
   min-height: 60rem;
+  width: 110%;
 }
 
 .signIn-paragraph{
@@ -153,6 +154,11 @@ input.login:focus,textarea.article:focus{
 
 @media (max-width:1024px){
   .col.right-part{width: 100%;}
+  .login-img{
+    width: 100%;
+    right: 2vw;
+    float: left;
+  }
 }
 
 /* CreateArticle */
