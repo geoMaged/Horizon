@@ -1,4 +1,4 @@
-html{
+html {
   height: 100%;
 }
 body {
@@ -9,10 +9,9 @@ body {
   padding-bottom: 100px;
 }
 
-
 /* Navbar */
-nav{
-  height: 100px;
+nav {
+  height: 5%;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -20,34 +19,34 @@ nav{
   color: #eeeeee;
 }
 
-
-h1.nav-item{
-  font-size: 4rem;
-  position: relative;
-  right: 2%;
+h1.nav-item {
+  font-size: 10vh;
+  margin-left: 3vw;
 }
 
-.nav-item{
+.nav-item {
   color: #eeeeee;
-  margin: auto 0px;
+  margin: auto 0;
   text-align: center;
   display: flex;
   justify-content: space-around;
-  width: 20%;
   list-style: none;
 }
 
-.nav-list-item{
+.nav-list-item {
   color: #eeeeee;
-  font-size: 1.3rem;
+  font-size: 3vh;
+  position: relative;
+  left: 12vw;
+  margin: 0 2vw;
 }
 
-.nav-list-item:hover{
+.nav-list-item:hover {
   text-decoration: none;
-  color:#00adb5 ;
+  color: #00adb5;
 }
 
-.btn-nav{
+.btn-nav {
   color: #222831;
   font-size: 1.3rem;
   margin-top: 25%;
@@ -56,17 +55,17 @@ h1.nav-item{
   right: 200px;
 }
 
-.btn-nav:hover{
+.btn-nav:hover {
   text-decoration: none;
-  color:#00adb5 ;
+  color: #00adb5;
 }
 
-.container{
+.container {
   margin-bottom: 200px;
   margin-top: 200px;
 }
 
-.avatar{
+.avatar {
   width: 50px;
   height: 50px;
   margin-top: 20px;
@@ -74,30 +73,30 @@ h1.nav-item{
 
 /* Login */
 
-
-.form-paragraph{
+.form-paragraph {
   text-decoration: none;
   color: #222831;
 }
 
-.form-paragraph:hover{
+.form-paragraph:hover {
   color: #222831;
 }
 
-form.login{
+form.login {
   text-align: center;
   position: relative;
   margin-top: 20vh;
 }
 
-.container.login{
+.container.login {
   width: 90%;
   min-height: 45rem;
   background-color: #eeeeee;
   box-shadow: 1px 1px 10px -1px #222831;
 }
 
-input.login,textarea.article{
+input.login,
+textarea.article {
   width: 90%;
   position: relative;
   text-align: center;
@@ -105,56 +104,61 @@ input.login,textarea.article{
   border-radius: 3px;
   margin: 0px 0px 25px 0px;
   color: #222831;
-  background-color:#eeeeee ;
+  background-color: #eeeeee;
 }
 
-.btn{
+.btn {
   width: 90%;
 }
 
-.btn-google{
-  margin-top: 20px;;
+.btn-google {
+  margin-top: 20px;
 }
-.heading{
+.heading {
   font-size: 2.5rem;
   color: #222831;
   margin: 30px auto;
 }
 
-.right-part{
+.right-part {
   margin: 10% 1%;
 }
-input.login::placeholder{
+
+input.login::placeholder {
   opacity: 30%;
   color: #222831;
 }
 
-input.login:focus,textarea.article:focus{
+input.login:focus,
+textarea.article:focus {
   background-color: #eeeeee;
   box-shadow: 1px 1px 7px -1px #222831;
 }
 
-.login-img{
+.login-img {
   position: relative;
   right: 1vw;
   min-height: 60rem;
   width: 110%;
 }
 
-.signIn-paragraph{
+.signIn-paragraph {
   color: #222831;
   font-size: 1rem;
   margin-top: 20px;
 }
 
-.signIn-paragraph:hover{
+.signIn-paragraph:hover {
   text-decoration: underline;
   color: #222831;
 }
 
-@media (max-width:1024px){
-  .col.right-part{width: 100%;}
-  .login-img{
+@media only screen and (max-width: 768px) {
+  .right-part {
+    width: 100%;
+  }
+
+  .login-img {
     width: 100%;
     right: 2vw;
     float: left;
@@ -163,7 +167,7 @@ input.login:focus,textarea.article:focus{
 
 /* CreateArticle */
 
-textarea{
+textarea {
   text-align: left;
   overflow: auto;
   font-size: 2rem;
@@ -172,31 +176,31 @@ textarea{
 
 /* Home Page */
 
-.home-title{
+.home-title {
   font-size: 5rem;
   padding-bottom: 50px;
 }
 
-.background-img{
+.background-img {
   width: 100%;
   min-height: 1000px;
   margin-bottom: 10vh;
 }
 
-.btn-outline-dark{
+.btn-outline-dark {
   color: #222831;
   font-size: 1.6rem;
   font-weight: 500;
-  position:relative;
-  bottom:900px;
+  position: relative;
+  bottom: 900px;
   margin: 0 auto;
   height: 60px;
-  width:300px;
+  width: 300px;
   border-radius: 0%;
   border-width: 2px;
 }
 
-.author-card{
+.author-card {
   display: inline-block;
   color: grey;
   position: relative;
@@ -204,7 +208,7 @@ textarea{
   left: 20px;
 }
 
-.avatarCircle{
+.avatarCircle {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -212,15 +216,14 @@ textarea{
   display: block;
   text-align: center;
 }
-.avatarCircle-letter{
+.avatarCircle-letter {
   position: relative;
   font-size: 30px;
   margin: auto;
   color: #eeeeee;
 }
 
-
-.flex-container{
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   color: #eeeeee;
@@ -228,18 +231,18 @@ textarea{
 
 /* Carousel Items */
 
-.carousel{
+.carousel {
   background-color: #222831;
   margin: 100px auto;
   color: #eeeeee;
 }
 
-.carousel-item{
+.carousel-item {
   padding: 15%;
 }
 /*Article Card */
 
-.article-card{
+.article-card {
   width: 60%;
   margin: 40px auto;
   color: #222831;
@@ -247,50 +250,47 @@ textarea{
   border-radius: 3px;
   box-shadow: 1px 1px 20px -10px #222831;
   padding: 10px;
-  
 }
 
-.fa-bookmark{
+.fa-bookmark {
   font-size: 20px;
 }
-.bookmark-btn{
+.bookmark-btn {
   width: 20%;
   margin: 20px;
-
 }
-.article-card:hover{
+.article-card:hover {
   color: #222831;
   text-decoration: none;
   text-decoration-line: none;
 }
 
-.article-card-text{
+.article-card-text {
   color: #222831;
 }
 
-.article-card-text:hover{
+.article-card-text:hover {
   color: #222831;
 }
-
 
 /* Article Page */
-.article{
+.article {
   margin: 0 auto;
   width: 80%;
 }
 
-.article-title{
+.article-title {
   margin: 50px;
   font-size: 2.5rem;
 }
 
-.article-paragraph{
+.article-paragraph {
   font-size: 1.5rem;
 }
 
 /* Footer */
 
-footer{
+footer {
   background-color: #222831;
   color: #eeeeee;
   position: absolute;
@@ -299,17 +299,17 @@ footer{
   left: 0;
 }
 
-.footer-paragraph{
+.footer-paragraph {
   text-align: center;
   margin-top: 1.2rem;
   color: #eeeeee;
 }
 
 /* About  */
-.about-heading{
-font-size: 3rem;
+.about-heading {
+  font-size: 3rem;
 }
 
-.about-paragraph{
-font-size: 1.5rem;
+.about-paragraph {
+  font-size: 1.5rem;
 }

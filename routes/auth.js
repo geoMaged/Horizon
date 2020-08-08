@@ -67,15 +67,20 @@ router.post('/register',(req,res)=> {
   
   
   router.post('/login',(req,res)=> {
-    console.log(req.body);
+
+    console.log("Auth");
     const userEmail = req.body.email;
     const userPassword = req.body.password;
     User.findOne({email:userEmail}, (err,foundUser) => {
+      console.log("HERE");
+      console.log(foundUser);
+      console.log(err);
       if(err){
         console.log(err);
       }else{
         if(foundUser){
           bcrypt.compare(userPassword, foundUser.password,function(err,result){
+            console.log("Result " + result);
             if(err){
               console.log(err);
             }else{

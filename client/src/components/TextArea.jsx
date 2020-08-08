@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function TextArea(props){
 
-    const [articleText,setArticleText] = useState('');
+    const [articleText,setArticleText] = useState(props.value);
 
     function handleChange(event){
         const text = event.target.value;

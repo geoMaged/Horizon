@@ -6,18 +6,20 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {UserContext} from './UserContext';
 
-function CreateArticle(){
+function EditArticle({location}){
+
+    console.log(location.state);
 
     const {state} = useContext(UserContext);
     const [article,setArticle] = useState({
-        title: '',
-        content:''
-        });
-
+        title:location.state.article.title,
+        content:location.state.article.content
+    });
+    
     function handleClick(){
         
         console.log(state);
-        axios.post('/api/articles/',article,{
+        axios.put('/api/articles/',{article, id:location.state.id},{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }
@@ -40,16 +42,17 @@ function CreateArticle(){
         });
     }
 
+
     return (
         <div>
             <Heading value='Be Creative' />
-            <Input name='title' type='text' placeholder='Title' onEdit={editArticle} value=''/><br/>
-            <TextArea name='content' onEdit={editArticle} value=''/>
+            <Input name='title' type='text' placeholder='Title' onEdit={editArticle} value={article.title}/><br/>
+            <TextArea name='content' onEdit={editArticle} value={article.content} />
             <Link to='/home' >
-                <button className='btn btn-lg btn-dark' onClick={handleClick}>Add Article</button>
+                <button className='btn btn-lg btn-dark' onClick={handleClick}>Edit Article</button>
             </Link>
         </div>
     )
 }
 
-export default CreateArticle;
+export default EditArticle;

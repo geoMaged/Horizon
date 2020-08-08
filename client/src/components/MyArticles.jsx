@@ -7,7 +7,7 @@ function MyArticles(){
     const [articles,setArticles] = useState([]);
 
     useEffect(()=>{
-        axios.get('/myarticles',{
+        axios.get('/api/articles/myarticles',{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('token')}`
             }

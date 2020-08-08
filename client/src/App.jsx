@@ -15,6 +15,7 @@ import Bookmarks from './components/Bookmarks';
 import MyArticles from './components/MyArticles';
 import Author from './components/Author';
 import About from './components/About';
+import EditArticle from './components/EditArticle';
 
 function App() {
 
@@ -37,7 +38,8 @@ return(
         <ProtectedRoute path='/bookmarks' exact component={Bookmarks}/>
         <ProtectedRoute path='/myarticles' exact component={MyArticles}/>
         <ProtectedRoute path='/author' exact component={Author}/>
-        <ProtectedRoute path='/about' exact component={About}/>
+        <Route path='/about' exact component={About}/>
+        <ProtectedRoute path='/editarticle' exact component={EditArticle}/>
         <Route  component={NotFound} />
     </Switch>
   <Footer />
