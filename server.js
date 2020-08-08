@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -18,7 +19,7 @@ app.use('/api/articles', articleRoutes)
 
 // mongoose.connect(`mongodb+srv://admin-george:${process.env.MONGODB_PASSWORD}@cluster0-shird.mongodb.net/horizonDB?retryWrites=true&w=majority`, {useNewUrlParser: true,useUnifiedTopology:true},err=>{
 mongoose.connect(
-  `mongodb://admin-george:lifewithnolimits@cluster0-shard-00-00-shird.mongodb.net:27017,cluster0-shard-00-01-shird.mongodb.net:27017,cluster0-shard-00-02-shird.mongodb.net:27017/horizonDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority`,
+  `mongodb://admin-george:${process.env.MONGODB_PASSWORD}@cluster0-shard-00-00-shird.mongodb.net:27017,cluster0-shard-00-01-shird.mongodb.net:27017,cluster0-shard-00-02-shird.mongodb.net:27017/horizonDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (err) {
