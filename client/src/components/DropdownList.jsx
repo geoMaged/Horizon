@@ -33,7 +33,10 @@ function DropdownList() {
       >
         <img src={avatar} alt='avatar' className='avatar' />
       </button>
-      <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+      <div
+        className='dropdown-menu dropdown-menu-right'
+        aria-labelledby='dropdownMenuButton'
+      >
         <Link className='dropdown-item' to='/home'>
           Home
         </Link>
