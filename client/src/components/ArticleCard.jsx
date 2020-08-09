@@ -11,7 +11,9 @@ function ArticleCard(props) {
         to={`/articles/${props.id}`}
       >
         <div className='card-body'>
-          <h1 className='article-card-text'>{props.title}</h1>
+          <h1 className='article-card-text' style={{ fontSize: '2rem' }}>
+            {props.title}
+          </h1>
           <p className='article-card-text'>{props.content}</p>
         </div>
       </Link>
