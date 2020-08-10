@@ -208,7 +208,6 @@ textarea {
 }
 
 .avatarCircle-letter {
-  position: relative;
   font-size: 5vh;
   margin: auto;
   color: #eeeeee;
@@ -330,5 +329,10 @@ footer {
   .bookmark-btn {
     width: 80%;
     margin: 1vw;
+  }
+  .avatarCircle-letter {
+    font-size: 3.5vh;
+    margin: auto;
+    color: #eeeeee;
   }
 }
