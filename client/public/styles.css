@@ -335,4 +335,8 @@ footer {
     margin: auto;
     color: #eeeeee;
   }
+  .home-title {
+    font-size: 3rem;
+    padding-bottom: 50px;
+  }
 }
